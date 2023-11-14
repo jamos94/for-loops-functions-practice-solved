@@ -7,7 +7,22 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
+  let containsChar;
+  const nameHasA = [];
+  const nameHasNoA = [];
+  const finalArray = [];
 
+  
+  for (let i = 0; i < array.length; i++){
+    containsChar = array[i].search("a") !== -1;
+    if(containsChar){
+      nameHasA.push(array[i]);
+    }else {
+      nameHasNoA.push(array[i]);
+    }
+  }
+  finalArray.push(nameHasA, nameHasNoA);
+  return finalArray;
 }
 
 
